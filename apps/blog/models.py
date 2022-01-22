@@ -69,6 +69,7 @@ class Post(models.Model):
     post_type = models.CharField(choices=POST_TYPE_CHOICES,max_length=20, default='unfeatured')
     is_editor_pick = models.BooleanField(default=False)
     is_trending = models.BooleanField(default=False)
+    is_inspiration = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True) 
 

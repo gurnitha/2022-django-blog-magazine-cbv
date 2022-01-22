@@ -112,3 +112,15 @@ https://github.com/gurnitha/2022-django-blog-magazine-cbv
         new file:   media/photos/2022/01/22/trending-sm-3.jpg
         new file:   media/photos/2022/01/22/trending-sm-4.jpg
 
+
+#### 7. Dynamic post - Filter post display by is_inspiration
+
+        modified:   README.md
+        new file:   apps/blog/migrations/0006_post_is_inspiration.py
+        modified:   apps/blog/models.py
+        modified:   apps/blog/templates/blog/post_list.html
+        modified:   apps/blog/urls.py
+        modified:   apps/blog/views.py
+        new file:   media/photos/2022/01/22/inspiration-1.jpg
+        new file:   media/photos/2022/01/22/inspiration-2.jpg
+        new file:   media/photos/2022/01/22/inspiration-3.jpg

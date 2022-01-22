@@ -423,7 +423,7 @@
 
 					<div class="spacer" data-height="50"></div>
 
-					<div class="spacer" data-height="50"></div>
+					<!-- ================ POST BY INSPIRATION  ===================-->
 
 					<!-- section header -->
 					<div class="section-header">
@@ -437,62 +437,37 @@
 
 					<div class="row post-carousel-twoCol post-carousel">
 						<!-- post -->
+						{% if post_inspiration %}
+						{% for inspiration in post_inspiration %}
 						<div class="post post-over-content col-md-6">
 							<div class="details clearfix">
-								<a href="category.html" class="category-badge">Inspiration</a>
-								<h4 class="post-title"><a href="blog-single.html">Want To Have A More Appealing Tattoo?</a></h4>
+								<a href="category.html" class="category-badge">{{inspiration.category_id.category_name|title}}</a>
+								<h4 class="post-title"><a href="blog-single.html">{{inspiration.post_title|title}}</a></h4>
 								<ul class="meta list-inline mb-0">
-									<li class="list-inline-item"><a href="#">Katen Doe</a></li>
-									<li class="list-inline-item">29 March 2021</li>
+									<li class="list-inline-item"><a href="#">{{inspiration.author_id.author_name|title}}</a></li>
+									<li class="list-inline-item">{{inspiration.post_publish}}</li>
 								</ul>
 							</div>
 							<a href="blog-single.html">
 								<div class="thumb rounded">
 									<div class="inner">
-										<img src="{% static 'images/posts/inspiration-1.jpg' %}" alt="thumb" />
+										<img src="{{inspiration.post_thumbnail.url}}" alt="thumb" />
 									</div>
 								</div>
 							</a>
 						</div>
-						<!-- post -->
+						{% endfor %}
+						{% else %}
 						<div class="post post-over-content col-md-6">
-							<div class="details clearfix">
-								<a href="category.html" class="category-badge">Inspiration</a>
-								<h4 class="post-title"><a href="blog-single.html">Feel Like A Pro With The Help Of These 7 Tips</a></h4>
-								<ul class="meta list-inline mb-0">
-									<li class="list-inline-item"><a href="#">Katen Doe</a></li>
-									<li class="list-inline-item">29 March 2021</li>
-								</ul>
-							</div>
-							<a href="blog-single.html">
-								<div class="thumb rounded">
-									<div class="inner">
-										<img src="{% static 'images/posts/inspiration-2.jpg' %}" alt="thumb" />
-									</div>
-								</div>
-							</a>
+							<p style="color:#FE7F7D;">No posts inspiration found</p>
 						</div>
-						<!-- post -->
-						<div class="post post-over-content col-md-6">
-							<div class="details clearfix">
-								<a href="category.html" class="category-badge">Inspiration</a>
-								<h4 class="post-title"><a href="blog-single.html">Your Light Is About To Stop Being Relevant</a></h4>
-								<ul class="meta list-inline mb-0">
-									<li class="list-inline-item"><a href="#">Katen Doe</a></li>
-									<li class="list-inline-item">29 March 2021</li>
-								</ul>
-							</div>
-							<a href="blog-single.html">
-								<div class="thumb rounded">
-									<div class="inner">
-										<img src="{% static 'images/posts/inspiration-3.jpg' %}" alt="thumb" />
-									</div>
-								</div>
-							</a>
-						</div>
+						{% endif %}
 					</div>
 
 					<div class="spacer" data-height="50"></div>
+
+
+					<!-- ================ LATEST POSTS  ===================-->
 
 					<!-- section header -->
 					<div class="section-header">

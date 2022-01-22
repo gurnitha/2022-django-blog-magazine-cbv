@@ -1,11 +1,11 @@
 # apps/blog/views.py
 
 # Django modules
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView
 
 # Locals
-from apps.blog.models import Post  
+from apps.blog.models import Post, Category  
 
 # Create your views here.
 
@@ -37,6 +37,8 @@ class PostList(ListView):
 		context['post_trending_large_1_1'] = Post.objects.filter(is_trending=True).order_by('id')[3:4]
 		# Load post by trending
 		context['post_trending_small_2_2'] = Post.objects.filter(is_trending=True).order_by('id')[4:6]
+		# Load post by inspiration
+		context['post_inspiration'] = Post.objects.filter(is_inspiration=True).order_by('id')[0:4]
 		# Page title
 		context['title'] = 'Blog Magazine'
 		return context
