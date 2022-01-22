@@ -6,38 +6,8 @@
 				<!-- site logo -->
 				<a class="navbar-brand" href="{% url 'blog:post_list' %}"><img src="{% static 'images/logo.svg' %}" alt="logo" /></a> 
 
-				<div class="collapse navbar-collapse">
-					<!-- menus -->
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
-							<a class="nav-link" href="{% url 'blog:post_list' %}">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{% url 'blog:post_single' %}">Lifestyle</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{% url 'blog:post_single' %}">Inspiration</a>
-						</li>
-
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#">Categories</a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="category.html">Category</a></li>
-								<li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
-								<li><a class="dropdown-item" href="blog-single-alt.html">Blog Single Alt</a></li>
-								<li><a class="dropdown-item" href="about.html">About</a></li>
-								<li><a class="dropdown-item" href="contact.html">Contact</a></li>
-							</ul>
-						</li>
-
-						<li class="nav-item">
-							<a class="nav-link" href="{% url 'blog:about' %}">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{% url 'blog:contact' %}">Contact</a>
-						</li>
-					</ul>
-				</div>
+				<!-- Navbar -->
+				{% include 'shared/navbar.html' %}
 
 				<!-- header right section -->
 				<div class="header-right">

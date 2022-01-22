@@ -43,3 +43,11 @@ https://github.com/gurnitha/2022-django-blog-magazine-cbv
         new file:   apps/blog/migrations/0001_initial.py
         modified:   apps/blog/models.py
 
+
+#### 3. Dynamic main menu with template tags Part 1 - File separtions
+
+        modified:   README.md
+        new file:   templates/shared/canvas_menu_tpl.html
+        modified:   templates/shared/header.html
+        new file:   templates/shared/navbar-tpl.html
+        new file:   templates/shared/navbar.html
