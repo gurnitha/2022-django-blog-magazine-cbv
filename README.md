@@ -98,3 +98,17 @@ https://github.com/gurnitha/2022-django-blog-magazine-cbv
         modified:   apps/blog/views.py
         new file:   media/authors/2022/01/22/author-sm_pvTVA2N.png
         new file:   media/authors/2022/01/22/ing-sm_o5PeVaT.png
+
+
+#### 6. Dynamic post - Filter post display by is_editor_pick and is_trending
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/post_list.html
+        modified:   apps/blog/views.py
+        new file:   media/photos/2022/01/22/trending-lg-1.jpg
+        new file:   media/photos/2022/01/22/trending-lg-2.jpg
+        new file:   media/photos/2022/01/22/trending-sm-1.jpg
+        new file:   media/photos/2022/01/22/trending-sm-2.jpg
+        new file:   media/photos/2022/01/22/trending-sm-3.jpg
+        new file:   media/photos/2022/01/22/trending-sm-4.jpg
+

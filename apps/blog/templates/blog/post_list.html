@@ -209,6 +209,8 @@
 
 				<div class="col-lg-8">
 
+					<!-- ================ POST BY EDITOR'S PICK ===================-->
+
 					<!-- section header -->
 					<div class="section-header">
 						<h3 class="section-title">Editor’s Pick</h3>
@@ -217,93 +219,66 @@
 
 					<div class="padding-30 rounded bordered">
 						<div class="row gy-5">
+
+							<!-- Editor's picks post by category -->
 							<div class="col-sm-6">
 								<!-- post -->
+								{% if post_editor_pick_1 %}
+								{% for editorpick in post_editor_pick_1 %}
 								<div class="post">
 									<div class="thumb rounded">
-										<a href="category.html" class="category-badge position-absolute">Lifestyle</a>
+										<a href="category.html" class="category-badge position-absolute">{{editorpick.category_id.category_name}}</a>
 										<span class="post-format">
 											<i class="icon-picture"></i>
 										</span>
 										<a href="blog-single.html">
 											<div class="inner">
-												<img src="{% static 'images/posts/editor-lg.jpg' %}" alt="post-title" />
+												<img src="{{editorpick.post_thumbnail.url}}" alt="post-title" />
 											</div>
 										</a>
 									</div>
 									<ul class="meta list-inline mt-4 mb-0">
-										<li class="list-inline-item"><a href="#"><img src="{% static 'images/other/author-sm.png' %}" class="author" alt="author"/>Katen Doe</a></li>
-										<li class="list-inline-item">29 March 2021</li>
+										<li class="list-inline-item"><a href="#"><img src="{{editorpick.author_id.author_thumbnail.url}}" class="author" alt="author"/>{{editorpick.author_id.author_name|title}}</a></li>
+										<li class="list-inline-item">{{editorpick.post_publish}}</li>
 									</ul>
-									<h5 class="post-title mb-3 mt-3"><a href="blog-single.html">15 Unheard Ways To Achieve Greater Walker</a></h5>
-									<p class="excerpt mb-0">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy</p>
+									<h5 class="post-title mb-3 mt-3"><a href="blog-single.html">{{editorpick.post_title|title}}</a></h5>
+									<p class="excerpt mb-0">{{editorpick.post_content|slice:"70"}}</p>
 								</div>
+								{% endfor %}
+								{% else %}
+								<div class="post">
+									<p style="color:#FE7F7D;">No posts editor's pick found</p>
+								</div>
+								{% endif %}
+
 							</div>
+							<!-- End Editor's picks post by category -->
+
 							<div class="col-sm-6">
 								<!-- post -->
+								{% if post_editor_pick_4 %}
+								{% for editorpick in post_editor_pick_4%}
 								<div class="post post-list-sm square">
 									<div class="thumb rounded">
 										<a href="blog-single.html">
 											<div class="inner">
-												<img src="{% static 'images/posts/editor-sm-1.jpg' %}" alt="post-title" />
+												<img src="{{editorpick.post_thumbnail.url}}" alt="post-title" />
 											</div>
 										</a>
 									</div>
 									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">3 Easy Ways To Make Your iPhone Faster</a></h6>
+										<h6 class="post-title my-0"><a href="blog-single.html">{{editorpick.post_title|title}}</a></h6>
 										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
+											<li class="list-inline-item">{{editorpick.post_publish}}</li>
 										</ul>
 									</div>
 								</div>
-								<!-- post -->
+								{% endfor %}
+								{% else %}
 								<div class="post post-list-sm square">
-									<div class="thumb rounded">
-										<a href="blog-single.html">
-											<div class="inner">
-												<img src="{% static 'images/posts/editor-sm-2.jpg' %}" alt="post-title" />
-											</div>
-										</a>
-									</div>
-									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">An Incredibly Easy Method That Works For All</a></h6>
-										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
-										</ul>
-									</div>
+									<p style="color:#FE7F7D;">No posts editor's pick found</p>
 								</div>
-								<!-- post -->
-								<div class="post post-list-sm square">
-									<div class="thumb rounded">
-										<a href="blog-single.html">
-											<div class="inner">
-												<img src="{% static 'images/posts/editor-sm-3.jpg' %}" alt="post-title" />
-											</div>
-										</a>
-									</div>
-									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">10 Ways To Immediately Start Selling Furniture</a></h6>
-										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
-										</ul>
-									</div>
-								</div>
-								<!-- post -->
-								<div class="post post-list-sm square">
-									<div class="thumb rounded">
-										<a href="blog-single.html">
-											<div class="inner">
-												<img src="{% static 'images/posts/editor-sm-4.jpg' %}" alt="post-title" />
-											</div>
-										</a>
-									</div>
-									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">15 Unheard Ways To Achieve Greater Walker</a></h6>
-										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
-										</ul>
-									</div>
-								</div>
+								{% endif %}
 							</div>
 						</div>
 					</div>
@@ -320,6 +295,8 @@
 
 					<div class="spacer" data-height="50"></div>
 
+					<!-- ================ POST BY TRENDING ===================-->
+
 					<!-- section header -->
 					<div class="section-header">
 						<h3 class="section-title">Trending</h3>
@@ -328,116 +305,123 @@
 
 					<div class="padding-30 rounded bordered">
 						<div class="row gy-5">
+
+							<!-- Posts Large and small -->
 							<div class="col-sm-6">
 								<!-- post large -->
+								{% if post_trending_large_1 %}
+								{% for trendinglarge in post_trending_large_1 %}
 								<div class="post">
 									<div class="thumb rounded">
-										<a href="category.html" class="category-badge position-absolute">Culture</a>
+										<a href="category.html" class="category-badge position-absolute">{{trendinglarge.category_id.category_name}}</a>
 										<span class="post-format">
 											<i class="icon-picture"></i>
 										</span>
 										<a href="blog-single.html">
 											<div class="inner">
-												<img src="{% static 'images/posts/trending-lg-1.jpg' %}" alt="post-title" />
+												<img src="{{trendinglarge.post_thumbnail.url}}" alt="post-title" />
 											</div>
 										</a>
 									</div>
 									<ul class="meta list-inline mt-4 mb-0">
-										<li class="list-inline-item"><a href="#"><img src="{% static 'images/other/author-sm.png' %}" class="author" alt="author"/>Katen Doe</a></li>
-										<li class="list-inline-item">29 March 2021</li>
+										<li class="list-inline-item"><a href="#"><img src="{{trendinglarge.author_id.author_thumbnail.url}}" class="author" alt="author"/>{{trendinglarge.author_id.author_name}}</a></li>
+										<li class="list-inline-item">{{trendinglarge.post_publish}}</li>
 									</ul>
-									<h5 class="post-title mb-3 mt-3"><a href="blog-single.html">Facts About Business That Will Help You Success</a></h5>
-									<p class="excerpt mb-0">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy</p>
+									<h5 class="post-title mb-3 mt-3"><a href="blog-single.html">{{trendinglarge.post_title|title}}</a></h5>
+									<p class="excerpt mb-0">{{trendinglarge.post_content|slice:"70"}}</p>
 								</div>
-								<!-- post -->
+								{% endfor %}
+								{% else %}
+								<div class="post">
+									<p style="color:#FE7F7D;">No posts trending found</p>
+								</div>
+								{% endif %}
+								<!-- post small-->
+								{% if post_trending_small_2 %}
+								{% for trendingsmall in post_trending_small_2 %}
 								<div class="post post-list-sm square before-seperator">
 									<div class="thumb rounded">
 										<a href="blog-single.html">
 											<div class="inner">
-												<img src="{% static 'images/posts/trending-sm-1.jpg' %}" alt="post-title" />
+												<img src="{{trendingsmall.post_thumbnail.url}}" alt="post-title" />
 											</div>
 										</a>
 									</div>
 									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">3 Easy Ways To Make Your iPhone Faster</a></h6>
+										<h6 class="post-title my-0"><a href="blog-single.html">{{trendingsmall.post_title|title}}</a></h6>
 										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
+											<li class="list-inline-item">{{trendingsmall.post_publish}}</li>
 										</ul>
 									</div>
 								</div>
-								<!-- post -->
+								{% endfor %}
+								{% else %}
 								<div class="post post-list-sm square before-seperator">
-									<div class="thumb rounded">
-										<a href="blog-single.html">
-											<div class="inner">
-												<img src="{% static 'images/posts/trending-sm-2.jpg' %}" alt="post-title" />
-											</div>
-										</a>
-									</div>
-									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">An Incredibly Easy Method That Works For All</a></h6>
-										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
-										</ul>
-									</div>
+									<p style="color:#FE7F7D;">No posts trending found</p>
 								</div>
+								{% endif %}
 							</div>
+
+							<!-- Posts Large and small -->
 							<div class="col-sm-6">
 								<!-- post large -->
+								{% if post_trending_large_1_1 %}
+								{% for trendinglarge in post_trending_large_1_1 %}
 								<div class="post">
 									<div class="thumb rounded">
-										<a href="category.html" class="category-badge position-absolute">Inspiration</a>
+										<a href="category.html" class="category-badge position-absolute">{{trendinglarge.category_id.category_name}}</a>
 										<span class="post-format">
-											<i class="icon-earphones"></i>
+											<i class="icon-picture"></i>
 										</span>
 										<a href="blog-single.html">
 											<div class="inner">
-												<img src="{% static 'images/posts/trending-lg-2.jpg' %}" alt="post-title" />
+												<img src="{{trendinglarge.post_thumbnail.url}}" alt="post-title" />
 											</div>
 										</a>
 									</div>
 									<ul class="meta list-inline mt-4 mb-0">
-										<li class="list-inline-item"><a href="#"><img src="{% static 'images/other/author-sm.png' %}" class="author" alt="author"/>Katen Doe</a></li>
-										<li class="list-inline-item">29 March 2021</li>
+										<li class="list-inline-item"><a href="#"><img src="{{trendinglarge.author_id.author_thumbnail.url}}" class="author" alt="author"/>{{trendinglarge.author_id.author_name}}</a></li>
+										<li class="list-inline-item">{{trendinglarge.post_publish}}</li>
 									</ul>
-									<h5 class="post-title mb-3 mt-3"><a href="blog-single.html">5 Easy Ways You Can Turn Future Into Success</a></h5>
-									<p class="excerpt mb-0">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy</p>
+									<h5 class="post-title mb-3 mt-3"><a href="blog-single.html">{{trendinglarge.post_title|title}}</a></h5>
+									<p class="excerpt mb-0">{{trendinglarge.post_content|slice:"70"}}</p>
 								</div>
-								<!-- post -->
+								{% endfor %}
+								{% else %}
+								<div class="post">
+									<p style="color:#FE7F7D;">No posts trending found</p>
+								</div>
+								{% endif %}
+								<!-- post small-->
+								{% if post_trending_small_2_2 %}
+								{% for trendingsmall in post_trending_small_2_2 %}
 								<div class="post post-list-sm square before-seperator">
 									<div class="thumb rounded">
 										<a href="blog-single.html">
 											<div class="inner">
-												<img src="{% static 'images/posts/trending-sm-3.jpg' %}" alt="post-title" />
+												<img src="{{trendingsmall.post_thumbnail.url}}" alt="post-title" />
 											</div>
 										</a>
 									</div>
 									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">Here Are 8 Ways To Success Faster</a></h6>
+										<h6 class="post-title my-0"><a href="blog-single.html">{{trendingsmall.post_title|title}}</a></h6>
 										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
+											<li class="list-inline-item">{{trendingsmall.post_publish}}</li>
 										</ul>
 									</div>
 								</div>
-								<!-- post -->
+								{% endfor %}
+								{% else %}
 								<div class="post post-list-sm square before-seperator">
-									<div class="thumb rounded">
-										<a href="blog-single.html">
-											<div class="inner">
-												<img src="{% static 'images/posts/trending-sm-4.jpg' %}" alt="post-title" />
-											</div>
-										</a>
-									</div>
-									<div class="details clearfix">
-										<h6 class="post-title my-0"><a href="blog-single.html">Master The Art Of Nature With These 7 Tips</a></h6>
-										<ul class="meta list-inline mt-1 mb-0">
-											<li class="list-inline-item">29 March 2021</li>
-										</ul>
-									</div>
+									<p style="color:#FE7F7D;">No posts trending found</p>
 								</div>
+								{% endif %}
 							</div>
+
 						</div>
 					</div>
+
+					<div class="spacer" data-height="50"></div>
 
 					<div class="spacer" data-height="50"></div>
 
