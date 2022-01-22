@@ -166,3 +166,10 @@ https://github.com/gurnitha/2022-django-blog-magazine-cbv
            because a lot of things goin on behind the hode.
 
 
+#### 10. Dynamic post - Showing post's category on each post
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/post_list.html
+        new file:   media/authors/2022/01/22/ing-sm.jpg
+        new file:   media/authors/2022/01/22/ing-sm_uV3jPZJ.jpg
+

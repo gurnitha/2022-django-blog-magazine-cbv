@@ -270,6 +270,10 @@
 										<h6 class="post-title my-0"><a href="blog-single.html">{{editorpick.post_title|title}}</a></h6>
 										<ul class="meta list-inline mt-1 mb-0">
 											<li class="list-inline-item">{{editorpick.post_publish}}</li>
+											<li class="list-inline-item">
+												<a href="#" style="color:#FF7C7D;">
+												{{editorpick.category_id.category_name}}</a>
+											</li>
 										</ul>
 									</div>
 								</div>
@@ -351,6 +355,9 @@
 										<h6 class="post-title my-0"><a href="blog-single.html">{{trendingsmall.post_title|title}}</a></h6>
 										<ul class="meta list-inline mt-1 mb-0">
 											<li class="list-inline-item">{{trendingsmall.post_publish}}</li>
+											<li class="list-inline-item">
+												<a href="#" style="color:#FF7C7D;">{{trendingsmall.category_id.category_name}}</a>
+											</li>
 										</ul>
 									</div>
 								</div>
@@ -407,6 +414,7 @@
 										<h6 class="post-title my-0"><a href="blog-single.html">{{trendingsmall.post_title|title}}</a></h6>
 										<ul class="meta list-inline mt-1 mb-0">
 											<li class="list-inline-item">{{trendingsmall.post_publish}}</li>
+											<li><a href="#" style="color:#FF7C7D;">{{trendingsmall.category_id.category_name}}</a></li>
 										</ul>
 									</div>
 								</div>
@@ -498,7 +506,7 @@
 											<li class="list-inline-item"><a href="#"><img src="{{latest.author_id.author_thumbnail.url}}" class="author" alt="author"/>{{latest.author_id.author_name|title}}</a></li>
 											<li class="list-inline-item">
 												
-												<a href="#">{{latest.category_id.category_name}}</a>
+												<a href="#" style="color:#FF7C7D;">{{latest.category_id.category_name}}</a>
 												
 											</li>
 											<li class="list-inline-item">{{latest.post_publish}}</li>
