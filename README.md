@@ -51,3 +51,10 @@ https://github.com/gurnitha/2022-django-blog-magazine-cbv
         modified:   templates/shared/header.html
         new file:   templates/shared/navbar-tpl.html
         new file:   templates/shared/navbar.html
+
+
+#### 4. Dynamic main menu with template tags Part 2 - Create template-library
+
+        modified:   README.md
+        new file:   apps/blog/templatetags/__init__.py
+        new file:   apps/blog/templatetags/template-library.py
