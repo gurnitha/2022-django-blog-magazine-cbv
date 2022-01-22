@@ -53,7 +53,7 @@ class Post(models.Model):
 
     POST_TYPE_CHOICES = (
         ('featured', 'featured'),
-        ('featured', 'featured')
+        ('unfeatured', 'unfeatured')
     )	
 
     post_title = models.CharField(max_length=255)
@@ -66,7 +66,7 @@ class Post(models.Model):
     post_thumbnail   = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=False)
     post_views   = models.IntegerField(default=0, verbose_name='Times of viewed')
     post_status = models.CharField(choices=STATUS_POST_CHOICES, max_length=15, default='draft')
-    post_type = models.CharField(choices=POST_TYPE_CHOICES,max_length=20, default='latest')
+    post_type = models.CharField(choices=POST_TYPE_CHOICES,max_length=20, default='unfeatured')
     is_editor_pick = models.BooleanField(default=False)
     is_trending = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)

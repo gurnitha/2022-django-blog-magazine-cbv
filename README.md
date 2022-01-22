@@ -77,3 +77,15 @@ https://github.com/gurnitha/2022-django-blog-magazine-cbv
         deleted:    templates/shared/navbar-tpl.html
         renamed:    templates/shared/canvas_menu_tpl.html -> templates/shared/tpl/canvas_menu_tpl.html
         new file:   templates/shared/tpl/menu_tpl.html
+
+
+#### 5. Dynamic post - Modified model and insert some posts
+
+        modified:   README.md
+        new file:   apps/blog/migrations/0002_auto_20220122_1437.py
+        new file:   apps/blog/migrations/0003_auto_20220122_1441.py
+        new file:   apps/blog/migrations/0004_alter_post_post_type.py
+        new file:   apps/blog/migrations/0005_alter_post_post_type.py
+        modified:   apps/blog/models.py
+        ...
+        new file:   media/photos/2022/01/22/featured-lg.jpg
