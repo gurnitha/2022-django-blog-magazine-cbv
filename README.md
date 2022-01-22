@@ -124,3 +124,10 @@ https://github.com/gurnitha/2022-django-blog-magazine-cbv
         new file:   media/photos/2022/01/22/inspiration-1.jpg
         new file:   media/photos/2022/01/22/inspiration-2.jpg
         new file:   media/photos/2022/01/22/inspiration-3.jpg
+
+
+#### 8. Dynamic post - Filter post display by latest LIFO
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/post_list.html
+        modified:   apps/blog/views.py

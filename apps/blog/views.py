@@ -39,6 +39,8 @@ class PostList(ListView):
 		context['post_trending_small_2_2'] = Post.objects.filter(is_trending=True).order_by('id')[4:6]
 		# Load post by inspiration
 		context['post_inspiration'] = Post.objects.filter(is_inspiration=True).order_by('id')[0:4]
+		# Load post LIFO
+		context['post_latest'] = Post.objects.all().order_by('-id')[0:4]
 		# Page title
 		context['title'] = 'Blog Magazine'
 		return context
