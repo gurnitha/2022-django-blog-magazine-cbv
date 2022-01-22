@@ -1,4 +1,5 @@
 {% load static %}
+{% load template_library %}
 
 	<header class="header-default">
 		<nav class="navbar navbar-expand-lg">
@@ -7,7 +8,7 @@
 				<a class="navbar-brand" href="{% url 'blog:post_list' %}"><img src="{% static 'images/logo.svg' %}" alt="logo" /></a> 
 
 				<!-- Navbar -->
-				{% include 'shared/navbar.html' %}
+				{% show_menu %}
 
 				<!-- header right section -->
 				<div class="header-right">

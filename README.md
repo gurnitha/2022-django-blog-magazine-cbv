@@ -58,3 +58,22 @@ https://github.com/gurnitha/2022-django-blog-magazine-cbv
         modified:   README.md
         new file:   apps/blog/templatetags/__init__.py
         new file:   apps/blog/templatetags/template-library.py
+
+
+#### 5. Dynamic main menu with template tags Part 3 - Create template_library, show_menu method and Use show_menu to display menu
+
+        Steps:
+
+        1. Define logic in template library
+        2. Loop menu
+        3. Load template_library
+        4. Use show_menu to display menu
+
+        modified:   README.md
+        deleted:    apps/blog/templatetags/template-library.py
+        new file:   apps/blog/templatetags/template_library.py
+        modified:   templates/shared/canvas-menu.html
+        modified:   templates/shared/header.html
+        deleted:    templates/shared/navbar-tpl.html
+        renamed:    templates/shared/canvas_menu_tpl.html -> templates/shared/tpl/canvas_menu_tpl.html
+        new file:   templates/shared/tpl/menu_tpl.html
