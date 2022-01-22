@@ -496,7 +496,11 @@
 									<div class="details">
 										<ul class="meta list-inline mb-3">
 											<li class="list-inline-item"><a href="#"><img src="{{latest.author_id.author_thumbnail.url}}" class="author" alt="author"/>{{latest.author_id.author_name|title}}</a></li>
-											<li class="list-inline-item"><a href="#">Trending</a></li>
+											<li class="list-inline-item">
+												
+												<a href="#">{{latest.category_id.category_name}}</a>
+												
+											</li>
 											<li class="list-inline-item">{{latest.post_publish}}</li>
 										</ul>
 										<h5 class="post-title"><a href="blog-single.html">{{latest.post_title|title}}</a></h5>

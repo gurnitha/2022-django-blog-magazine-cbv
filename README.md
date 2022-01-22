@@ -131,3 +131,38 @@ https://github.com/gurnitha/2022-django-blog-magazine-cbv
         modified:   README.md
         modified:   apps/blog/templates/blog/post_list.html
         modified:   apps/blog/views.py
+
+
+#### 9. Dynamic post - Showing post's category on latest posts
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/post_list.html
+        modified:   apps/blog/views.py
+        new file:   media/photos/2022/01/22/author-sm.png
+        new file:   media/photos/2022/01/22/latest-sm-2_JhJASEo.jpg
+
+        NOTE: About showing post's category on the latest posts
+
+        1. In view function you do this:
+
+                {% for latest in post_latest %}
+                        {% for cat in latest.category_id.all %}
+                                <a href="#">{{ cat.category_name|title }}</a>
+                        {% endfor %}
+                {% endfor %}
+
+
+        2. But in CBV you to only this:
+        
+                {% for latest in post_latest %}
+                        <a href="#">{{latest.category_id.category_name}}</a>
+                {% endfor %}
+
+        Note: 
+
+        1. category_id is the fk of the Category model in Post model
+        2. In View Function: more codes, but easier to understand
+        3. In CBV: less codes, but very difficult to understand
+           because a lot of things goin on behind the hode.
+
+

@@ -40,7 +40,7 @@ class PostList(ListView):
 		# Load post by inspiration
 		context['post_inspiration'] = Post.objects.filter(is_inspiration=True).order_by('id')[0:4]
 		# Load post LIFO
-		context['post_latest'] = Post.objects.all().order_by('-id')[0:4]
+		context['post_latest'] = Post.objects.all().order_by('-created')[0:4]
 		# Page title
 		context['title'] = 'Blog Magazine'
 		return context
