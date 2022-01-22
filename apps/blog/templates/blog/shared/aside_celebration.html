@@ -1,0 +1,18 @@
+{% load static %}
+						<div class="widget rounded">
+							<div class="widget-header text-center">
+								<h3 class="widget-title">Celebration</h3>
+								<img src="{% static 'images/wave.svg' %}" class="wave" alt="wave" />
+							</div>
+							<div class="widget-content">
+								<div class="post-carousel-widget">
+									<!-- post -->
+									{% include 'blog/shared/templatetags/aside_celebration.html' %}
+								</div>
+								<!-- carousel arrows -->
+								<div class="slick-arrows-bot">
+									<button type="button" data-role="none" class="carousel-botNav-prev slick-custom-buttons" aria-label="Previous"><i class="icon-arrow-left"></i></button>
+									<button type="button" data-role="none" class="carousel-botNav-next slick-custom-buttons" aria-label="Next"><i class="icon-arrow-right"></i></button>
+								</div>
+							</div>		
+						</div>

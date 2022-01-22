@@ -1,0 +1,13 @@
+{% load static %}
+						<div class="widget rounded">
+							<div class="widget-header text-center">
+								<h3 class="widget-title">Explore Topics</h3>
+								<img src="{% static 'images/wave.svg' %}" class="wave" alt="wave" />
+							</div>
+							<div class="widget-content">
+								<ul class="list">
+									{% include 'blog/shared/templatetags/aside_categories.html' %}
+								</ul>
+							</div>
+							
+						</div>

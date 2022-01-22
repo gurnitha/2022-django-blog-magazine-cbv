@@ -1,0 +1,11 @@
+{% load static %}
+						<div class="widget rounded">
+							<div class="widget-header text-center">
+								<h3 class="widget-title">Popular Posts</h3>
+								<img src="{% static 'images/wave.svg' %}" class="wave" alt="wave" />
+							</div>
+							<div class="widget-content">
+								<!-- post -->
+								{% include 'blog/shared/templatetags/aside_pupular_posts.html' %}
+							</div>		
+						</div>
