@@ -89,3 +89,12 @@ https://github.com/gurnitha/2022-django-blog-magazine-cbv
         modified:   apps/blog/models.py
         ...
         new file:   media/photos/2022/01/22/featured-lg.jpg
+
+
+#### 5. Dynamic post - Filter post display by post_type=featured
+
+        modified:   README.md
+        modified:   apps/blog/templates/blog/post_list.html
+        modified:   apps/blog/views.py
+        new file:   media/authors/2022/01/22/author-sm_pvTVA2N.png
+        new file:   media/authors/2022/01/22/ing-sm_o5PeVaT.png
