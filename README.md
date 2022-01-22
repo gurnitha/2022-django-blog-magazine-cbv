@@ -31,3 +31,15 @@ https://github.com/gurnitha/2022-django-blog-magazine-cbv
         modified:   README.md
 
         NOTE: Static files are ignored by git
+
+
+#### 2. Create models: Author, Category, Tag and Post
+
+        modified:   README.md
+        modified:   apps/accounts/admin.py
+        new file:   apps/accounts/migrations/0001_initial.py
+        modified:   apps/accounts/models.py
+        modified:   apps/blog/admin.py
+        new file:   apps/blog/migrations/0001_initial.py
+        modified:   apps/blog/models.py
+
